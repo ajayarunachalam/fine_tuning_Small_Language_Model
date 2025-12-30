@@ -69,7 +69,7 @@ async def load_model():
             import urllib.request
             
             # Replace with our actual model URL: The google drive link or other hosting link
-            model_url = os.getenv('MODEL_URL', 'https://drive.google.com/file/d/1ZysY-kwxDIZyMQl2I42sheAN5cf85Xs-/view?usp=drive_link') #YOUR_MODEL_DOWNLOAD_URL
+            model_url = os.getenv('MODEL_URL', 'YOUR_MODEL_DOWNLOAD_URL') # eg: https://drive.google.com/file/view?usp=drive_link
             urllib.request.urlretrieve(model_url, model_path)
             logger.info("Model downloaded successfully!")
         
@@ -222,4 +222,5 @@ async def generate_custom(
 
 if __name__ == "__main__":
     # For local testing
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
