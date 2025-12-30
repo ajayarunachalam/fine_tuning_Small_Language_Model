@@ -1,9 +1,8 @@
 [build]
 builder = "dockerfile"
-dockerfilePath = "my-medlm-api-app/Dockerfile"
-buildContext = "my-medlm-api-app"
 
 [deploy]
+rootDirectory = "my-medlm-api-app"
 startCommand = "hypercorn main:app --bind [::]:8000"
 restartPolicyType = "on_failure"
 restartPolicyMaxRetries = 10
