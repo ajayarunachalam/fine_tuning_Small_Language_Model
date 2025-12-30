@@ -1,7 +1,7 @@
-
 [build]
 builder = "dockerfile"
 dockerfilePath = "my-medlm-api-app/Dockerfile"
+buildContext = "my-medlm-api-app"
 
 [deploy]
 startCommand = "hypercorn main:app --bind [::]:8000"
