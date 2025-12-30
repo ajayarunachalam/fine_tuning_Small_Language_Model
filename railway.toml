@@ -1,0 +1,9 @@
+
+[build]
+builder = "dockerfile"
+dockerfilePath = "my-medlm-api-app/Dockerfile"
+
+[deploy]
+startCommand = "hypercorn main:app --bind [::]:8000"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
